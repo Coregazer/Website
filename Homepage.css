@@ -33,9 +33,9 @@ body{
 #Title h1{
 
 	
-    background: -webkit-radial-gradient(50px,white, lightgrey);
+    background: -webkit-radial-gradient(50px,darkgrey, lightgrey);
 	
-    background: -moz-radial-gradient(50px,white,lightgrey);
+    background: -moz-radial-gradient(50px,darkgrey,lightgrey);
  	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
