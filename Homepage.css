@@ -1,5 +1,12 @@
 body{ 
     background-color:lightgrey;
+    
+     background: rgb(244,244,244);
+    background: -moz-linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(190,190,190,1) 56%, rgba(190,190,190,1) 75%,rgba(207,207,207,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(190,190,190,1) 56%,rgba(190,190,190,1) 75%, rgba(207,207,207,1) 100%);
+    background: linear-gradient(0deg, rgba(244,244,244,1) 0%, rgba(190,190,190,1) 56%,rgba(190,190,190,1) 75%, rgba(207,207,207,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4",endColorstr="#cfcfcf",GradientType=1);
+    
 }
 
 
