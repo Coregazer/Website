@@ -21,6 +21,8 @@ body{
 }
 
 #Title{  
+	
+    background: -moz-radial-gradient(50px,rgb(darkgrey),rgba(rgba(255, 99, 71, 0)));
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,9 +35,7 @@ body{
 #Title h1{
 
 	
-    background: -webkit-radial-gradient(50px,darkgrey, lightgrey);
-	
-    background: -moz-radial-gradient(50px,darkgrey,lightgrey);
+    background: -webkit-radial-gradient(50px,white, lightgrey);
  	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
