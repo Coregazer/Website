@@ -35,7 +35,8 @@ body{
 #Title h1{
 
 	
-    background: -webkit-radial-gradient(50px,white, lightgrey);
+	font-size:3.75em;
+	background: -webkit-radial-gradient(50px,white, lightgrey);
  	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
