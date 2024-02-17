@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <style>
+        /*TO DO:
+            -Move PDF file to below backstory on the right
+            -Change lower container on the left to media container for music
+        */
+
+        /* Base styles */
+        * {
+            background: #222; /* Dark background for all elements */
+            color: #ddd; /* Light text colour for contrast */
+        }
+        body {
+            margin: 0; /* Remove default body margin */
+        }
+        img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+        figcaption {
+            margin: 25px; /* Space around captions */
+            font-size: 1.5em; /* Larger caption text */
+        }
+
+        /* Container padding */
+        #page {
+            padding: 16px; /* Padding around the page content */
+        }
+
+        /* Image container styles */
+        #imageContainer {
+            margin-bottom: 16px; /* Space below the image container */
+        }
+        #imageContainer img {
+            border-radius: 16px; /* Rounded corners for images */
+        }
+
+        /* Media container styles */
+        #mediaContainer {
+            margin-bottom: 16px; /* Space below the media container */
+        }
+            #mediaContainer object {
+                min-height: 30rem; /* Minimum height for media objects */
+                width: 100%; /* Full width for responsiveness */
+                max-width: 1024px; /* Max width to constrain large objects */
+                object-fit: contain; /* Ensure media fits without stretching */
+                border-radius: 16px; /* Rounded corners for media objects */
+            }
+
+        /* Backstory field styling */
+            #backstoryField h2 {
+                margin: 0; /* Remove default margin */
+                font-size: 3em; /* Large font size for section titles */
+            }
+            #backstoryField h3 {
+                margin: 0; /* Remove default margin */
+                font-size: 2em; /* Medium font size for subtitles */
+                font-weight: normal; /* Normal font weight for subtitles */
+            }
+            #backstoryField p {
+                font-size: 2em; /* Large font size for paragraph text */
+            }
+
+        /* Responsive design for wider screens (1024px and above) */
+        @media(min-width: 1024px) {
+            #page {
+                display: grid;
+                grid-template-columns: 600px auto; /* Fixed width for left column, auto for the backstory to fill the rest */
+                grid-template-rows: 600px 600px; /* Fixed heights for image and media containers */
+                grid-template-areas:
+                    "image backstory"
+                    "media backstory";
+                height: 95vh; /* Use 95% of the viewport height */
+                gap: 16px; /* Space between grid items */
+                padding: 16px; /* Padding inside the grid */
+                overflow: clip; /* Prevent overflow */
+                justify-content: start; /* Align grid items to the start */
+            }
+
+            #imageContainer, #mediaContainer {
+                border-radius: 16px; /* Rounded corners for consistency */
+            }
+
+            #imageContainer img, #mediaContainer object {
+                height: 100%; /* Fill the container height */
+                width: 100%; /* Fill the container width */
+                object-fit: contain; /* Ensure content fits without stretching */
+            }
+
+            #imageContainer {
+                grid-area: image;
+            }
+
+            #mediaContainer {
+                grid-area: media;
+            }
+
+            #backstoryField {
+                grid-area: backstory;
+                overflow-y: scroll; /* Enable scrolling for longer texts */
+                padding: 16px; /* Padding inside the backstory field */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="imageContainer">
+            <figure>
+                <img src="profile.jpg"></img>
+                <figcaption><em>"Character quote goes here." - Character Name</em></figcaption>
+            </figure>
+        </div>
+        <div id="mediaContainer"><object data="character_sheet.pdf" type="application/pdf">
+            <p>Unable to display PDF file. <a href="character_sheet.pdf">Download here</a> instead.</p></object>
+        </div>
+        <div id="backstoryField">
+            <h2 id="charName">Marilda Gristhalda</h2>
+            <h3 id="subTitle"><em>The Witch's Heir</em></h3>
+            <p>In the twilight of a crescent moon, a ritual most foul was set into motion by a coven of hags, deep within the twisted groves of the Forgotten Realms. Their intent was dark—a changeling ritual to replace the firstborn of an unlikely union: a human and an elf, a child destined to bridge two worlds. The hags sought to weave chaos into the fabric of this relationship, planting one of their own in the guise of this half-elf child.</p>
+            <p>However, as the ritual neared its completion, a divine entity, moved by the plight of the innocent and the purity of the love between the child's parents, intervened. This celestial force, a guardian of balance and protector of the innocent, sought to redirect the child's fate. Though powerful, the entity was bound by ancient laws that forbade direct interference with such deep magic. It could not fully halt the ritual, but could alter its course.</p>
+            <p>In a tragic turn, the child's mother, a gentle elf of the forest, succumbed to the strain of childbirth—a life claimed by the dark energies swirling around the birth. The father, a sturdy and kind-hearted human, was left to mourn, unknowing of the true nature of his daughter's birth. The divine intervention, while saving the child from becoming a vessel of chaos, wove a new destiny for her. She was marked by both the divine and the dark—a beacon of potential change, yet shadowed by a prophecy of doom.</p>
+            <p>Named Marilda, she grew at the crossroads of two cultures, embodying the grace and connection to nature of her elven heritage, and the resilience and courage of her human lineage. Yet, beneath the surface, Marilda was different. Strange occurrences and inexplicable abilities manifested as she grew, hints of the dark ritual that heralded her arrival into the world.</p>
+            <p>On her fifteenth birthday, the truth of her origin was revealed. A mystic, sensing the tangle of fates around Marilda, unveiled the grim prophecy: by her twentieth year, she must confront and defeat the hag who sought to claim her, or be bound to the coven, her will enslaved to their malevolent whims. This revelation shattered her world, casting her path in a new light. The divine intervention that had altered her fate granted her a beacon of hope in the darkness that sought to claim her.
+            </p>
+            <p>Marilda set forth, driven by a desire to forge her own destiny, to protect the world she loved from the chaos that sought to engulf it. Her journey was to be one of self-discovery, as she sought to understand the full extent of her powers and the nature of the dark magic that she bore. Allies gathered around her—outcasts and wanderers, each with their own tale of defiance against the darkness.</p>
+        </div>
+    </div>
+</body>
+</html>
